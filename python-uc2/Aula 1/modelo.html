@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Pagina HTML 5</title>
+    <meta name="description" content="Exemplo">
+
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+    <style>
+
+        header {
+            border-width: 1px;
+            border-color: aquamarine;
+            border-style: solid;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        main {
+            border-width: 1px;
+            border-color: blue;
+            border-style: dashed;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            border-width: 1px;
+            border-color: chartreuse;
+            border-style: dotted;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+
+        .large-copyright {
+            font-size: 1.4em;       /* Makes the symbol 40% larger than the text around it */
+            line-height: 0;          /* Prevents the larger symbol from breaking line spacing */
+          vertical-align: -0.05em; /* Nudges it down slightly so it aligns perfectly with the text */
+            display: inline-block; }
+
+    </style>
+
+</head>
+<body>
+    <!--Inicio da Header-->
+    <header class="container">
+        Ola, Mundo!
+    </header>
+    <!--Fim da Header-->
+
+
+    <!--Inicio da Main-->
+    <main class="container">
+
+        <section id="section1" class="mb-5">
+            <h2 class="text-primary">
+                <i class="fas fa-lightbulb icon"></i>
+                Seçã 1: Font Awesome
+
+            </h2>
+        </section>
+        
+        <section id="section2" class="mb-5">
+            <article class="card mb-3">
+                <div class="card-body">
+                    <h3 class="cad-title text-warning">
+                        <i class="fas fa-pencil-alt icon"></i>
+                        Exemplos
+                    </h3>
+                    <ul>
+                        <li><i class="fas fa-info-circle icon"></i></li>
+                        <li><i class="fas fa-book icon"></i></li>
+                        <li><i class="fas fa-arrow-down icon"></i></li>
+                    </ul>
+                </div>
+
+            </article>          
+        </section>
+    </main>
+    <!--Fim da Main-->
+
+
+
+    <!--Inicio da Footer-->
+    <footer
+      id="footer" class="container text-center">
+         <p class="text-muted">
+          <i class="far fa-copyright icon"></i>
+                2023 - Todos os direitos reservados
+            </p>
+
+     </footer>
+    <!--Fim da Footer-->
+
+
+     <!-- Bootstrap JS e dependencias -->
+    <script 
+    
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+</html>
