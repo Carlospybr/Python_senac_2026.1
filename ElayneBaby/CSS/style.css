@@ -1,0 +1,16 @@
+body {
+    background-color: #729dc9;
+}
+
+h1, h2, h3 {
+    color: #163950;
+}
+
+p {
+    color: #756e6e;
+}
+
+.logo {
+    width: auto;
+    height: 200px;
+}
