@@ -22,73 +22,95 @@
 </head>
 
 <body>
-    <link rel="stylesheet" href="CSS/style.css">
 
-    <header class="container-fluid bg-light py-3">
-        <div class="d-flex justify-content-between align-items-center">
-            <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="text-start logo">
-            <div class="d-flex container justify-content-between align-items-center">
-                <h1 class="mb-0">Elayne Baby</h1>
-                <nav>
-                    <ul class="nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <header>
+        <div class="navbgcolor py-3 container-fluid">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="" height="50">
+                </div>
+                <div class="align-items-center d-flex justify-content-center col-md-8">
+                    <nav>
+                        <ul class="nav">
+                            <li class="nav-item"><a class="nav-link navcolor" href="#">Início</a></li>
+                            <li class="nav-item"><a class="nav-link navcolor" href="#">Produtos</a></li>
+                            <li class="nav-item"><a class="nav-link navcolor" href="#">Sobre</a></li>
+                            <li class="nav-item"><a class="nav-link navcolor" href="#">Contato</a></li>
+                        </ul>
+                     </nav>
+                </div>
+             </div>
         </div>
 
 
     </header>
 
     <main>
-        <section class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="py-center">
-                    <p class="mb-4 fw-light">Loja de Roupas Infantil</p>
-                    <h2>Bem-vindo à <em>Elayne Baby</em></h2>
-                    <p>Encontre roupas infantis de <span class="fst-italic fw-bold">qualidade</span> para seus pequenos.</p>
-                    <a href="#" class="btn btn-primary mt-3">Conheça a Coleção</a>
-                </div>
-                <div class="justify-content-end align-items-center mt-5">
-                    <img src="Images/bebe.png" alt="Logo Elayne Baby" class="img-fluid" height="400" width="400">
+        <!-- Hero -->
+        <section class="container-fluid" id="hero">
+            <div class="row text-center align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-4 fw-bold phero1">Pequenos Momentos. Grandes Memórias.</p>
+                    <h1>Bem-vindo à <em>Elayne Baby</em></h1>
+                    <p class="fs-5">Um Abraço em forma de <span class="fst-italic text-primary-emphasis fw-bolder">roupinha</span>.</p>
+                    <p class="fst-italic fw-light phero2">Fabricação Própria, com materiais de alta qualidade e anti-alérgicos.</p>
+                    <a href="#categorias" class="btn btn-primary mt-3">Conheça a  Nossa Coleção</a>    
+                </div>                 
+                <div class="col-md-6 mt-2">
+                        <img src="Images/bebe.png" alt="Bebê deitado no berço sorrindo" class="imgbebe m-4">
                 </div>
             </div>
 
             
         </section>
 
-        <section>
-            <h2>Categorias</h2>
-            <div>
-                Bodys
-            </div>
-
-            <div>
-                Macacões
-            </div>
-
-            <div>
-                Conjuntos
+        <section class="mt-5 mb-5 container" id="categorias">
+             <div class="row text-center">
+                <p class="fs-6 ">ESCOLHA POR CATEGORIA</p>
+                <h2 class="mb-4">Amor e Cuidado para cada Fase</h2>
+            <ul class="nav text-center align-items-center mt-5">
+                <li class="col-md-4">
+                    <a class="nav-link" href="#Bodys">
+                        <p class="text-start pnumerocat mb-1">01</p>
+                        <h3 class="pb-2">Bodies</h3>
+                        <p>Prático, duradouro e macio.</p>
+                    </a>
+                </li>
+                <li class="col-md-4">
+                    <a class="nav-link" href="#Pijamas">
+                        <p class="text-start pnumerocat mb-1">02</p>
+                        <h3 class="pb-2">Pijamas</h3>
+                        <p>Ideal para um sono tranquilo.</p>
+                    </a>
+                </li>
+                <li class="col-md-4">
+                    <a class="nav-link" href="#Promoções">
+                        <p class="text-start pnumerocat mb-1">03</p>
+                        <h3 class="pb-2">Promoções</h3>
+                        <p>Ofertas imperdíveis!</p>
+                    </a>
+                </li>
+            </ul>
             </div>
         </section>
 
         <section>
-            <h2>Produtos</h2>
+            <div class="container mt-5 mb-5" id="produtos">
+            <h2>Nossos Produtos</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card">  
                         <img src="produto1.jpg" class="card-img-top" alt="Produto 1">
                         <div class="card-body">
                             <h5 class="card-title">Produto 1</h5>
                             <p class="card-text">Descrição do produto 1.</p>
                             <p class="card-text">Preço: R$ 49,90</p>
-                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#comprar" class="btn btn-primary">Comprar</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            
                 
                 <div class="col-md-4">
                     <div class="card">
@@ -114,6 +136,7 @@
                     </div>
                 </div>
             </div>
+        
         </section>
     </main>
 

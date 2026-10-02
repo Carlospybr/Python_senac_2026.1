@@ -10,7 +10,32 @@ p {
     color: #756e6e;
 }
 
+.phero1 {
+    color: #f0e6de;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.phero2 {
+    color: #001c58;
+    font-size: 16px;
+}
+
 .logo {
     width: auto;
     height: 200px;
+}
+
+.imgbebe {
+    width: auto;
+    height: 400px;
+}
+
+.navcolor {
+    color: #f1e9dd;
+    font-size: 14px;
+}
+
+.navbgcolor {
+    background-color: #d39d60;
 }
