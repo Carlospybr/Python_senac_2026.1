@@ -1,150 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site de Elayne Baby, loja de roupas infantis.">
     <title>Elayne Baby</title>
-    
-        <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" 
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="navbgcolor py-3 container-fluid">
-            <div class="row">
-                <div class="col-md-2">
-                    <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="" height="50">
-                </div>
-                <div class="align-items-center d-flex justify-content-center col-md-8">
-                    <nav>
-                        <ul class="nav">
-                            <li class="nav-item"><a class="nav-link navcolor" href="#">Início</a></li>
-                            <li class="nav-item"><a class="nav-link navcolor" href="#">Produtos</a></li>
-                            <li class="nav-item"><a class="nav-link navcolor" href="#">Sobre</a></li>
-                            <li class="nav-item"><a class="nav-link navcolor" href="#">Contato</a></li>
-                        </ul>
-                     </nav>
-                </div>
-             </div>
-        </div>
+    <header class="navbgcolor">
+        <div class="container d-flex justify-content-between align-items-center p-2">
+            <div>
+                <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="img-fluid logo">
+            </div>
+            <div>
+                <nav aria-label="Menu de Navegação">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link navcolor" href="#hero">Início</a></li>
+                        <li class="nav-item"><a class="nav-link navcolor" href="#produtos1">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link navcolor" href="#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link navcolor" href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <button class="btn btn-outline-primary" type="button">
+                    Carrinho de Compras <span id="carrinho-count" class="badge text-bg-primary">0</span>
 
+                </button>
+            </div>
+        </div>
 
     </header>
 
     <main>
         <!-- Hero -->
-        <section class="container-fluid" id="hero">
+        <section class="container" id="hero">
             <div class="row text-center align-items-center">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                     <p class="mb-4 fw-bold phero1">Pequenos Momentos. Grandes Memórias.</p>
                     <h1>Bem-vindo à <em>Elayne Baby</em></h1>
-                    <p class="fs-5">Um Abraço em forma de <span class="fst-italic text-primary-emphasis fw-bolder">roupinha</span>.</p>
-                    <p class="fst-italic fw-light phero2">Fabricação Própria, com materiais de alta qualidade e anti-alérgicos.</p>
-                    <a href="#categorias" class="btn btn-primary mt-3">Conheça a  Nossa Coleção</a>    
-                </div>                 
-                <div class="col-md-6 mt-2">
-                        <img src="Images/bebe.png" alt="Bebê deitado no berço sorrindo" class="imgbebe m-4">
+                    <p class="fs-5">Um Abraço em forma de <span
+                            class="fst-italic text-primary-emphasis fw-bolder">roupinha</span>.</p>
+                    <p class="fst-italic fw-light phero2">Fabricação Própria, com materiais de alta qualidade e
+                        anti-alérgicos.</p>
+                    <a href="#categorias" class="btn btn-primary mt-3">Conheça a Nossa Coleção</a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="Images/bebe.png" alt="Bebê deitado no berço sorrindo" class="img-fluid imgbebe m-4">
                 </div>
             </div>
-
-            
         </section>
 
         <section class="mt-5 mb-5 container" id="categorias">
-             <div class="row text-center">
+            <div class="text-center">
                 <p class="fs-6 ">ESCOLHA POR CATEGORIA</p>
                 <h2 class="mb-4">Amor e Cuidado para cada Fase</h2>
-            <ul class="nav text-center align-items-center mt-5">
-                <li class="col-md-4">
-                    <a class="nav-link" href="#Bodys">
-                        <p class="text-start pnumerocat mb-1">01</p>
-                        <h3 class="pb-2">Bodies</h3>
-                        <p>Prático, duradouro e macio.</p>
-                    </a>
-                </li>
-                <li class="col-md-4">
-                    <a class="nav-link" href="#Pijamas">
-                        <p class="text-start pnumerocat mb-1">02</p>
-                        <h3 class="pb-2">Pijamas</h3>
-                        <p>Ideal para um sono tranquilo.</p>
-                    </a>
-                </li>
-                <li class="col-md-4">
-                    <a class="nav-link" href="#Promoções">
-                        <p class="text-start pnumerocat mb-1">03</p>
-                        <h3 class="pb-2">Promoções</h3>
-                        <p>Ofertas imperdíveis!</p>
-                    </a>
-                </li>
-            </ul>
+                <ul class="row list-unstyled nav g-3 text-center align-items-center mt-5">
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <a class="nav-link" href="#bodies">
+                            <p class="text-start pnumerocat mb-1">01</p>
+                            <h3 class="pb-2">Bodies</h3>
+                            <p>Quero algo prático, duradouro e macio.</p>
+                        </a>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <a class="nav-link" href="#pijamas">
+                            <p class="text-start pnumerocat mb-1">02</p>
+                            <h3 class="pb-2">Pijamas</h3>
+                            <p>Quero estilo e conforto para um sono tranquilo.</p>
+                        </a>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <a class="nav-link" href="#tocas-luvas">
+                            <p class="text-start pnumerocat mb-1">03</p>
+                            <h3 class="pb-2">Touquinhas e Luvinhas</h3>
+                            <p>Quero ver as touquinhas e luvinhas.</p>
+                        </a>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3">
+                        <a class="nav-link" href="#vertudo">
+                            <p class="text-start pnumerocat mb-1">04</p>
+                            <h3 class="pb-2">Ver Coleção Inteira</h3>
+                            <p>Quero ver todos os produtos</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section>
-            <div class="container mt-5 mb-5" id="produtos">
-            <h2>Nossos Produtos</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">  
-                        <img src="produto1.jpg" class="card-img-top" alt="Produto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Produto 1</h5>
-                            <p class="card-text">Descrição do produto 1.</p>
-                            <p class="card-text">Preço: R$ 49,90</p>
-                            <a href="#comprar" class="btn btn-primary">Comprar</a>
-                        </div>
-                    </div>
+        <section id="produtos1">
+            <div class="container mt-5 mb-5">
+                <h2>Nossos Produtos</h2>
+                <div role="group" aria-label="Filtrar produtos por categoria">
+                    <button type="button" class="btn btn-outline-primary me-2" data-filter="Body">Bodies</button>
+                    <button type="button" class="btn btn-outline-primary me-2" data-filter="Pijama">Pijamas</button>
+                    <button type="button" class="btn btn-outline-primary me-2" data-filter="tocas-luvas">Touquinhas e
+                        Luvinhas</button>
+                    <button type="button" class="btn btn-outline-secondary" data-filter="all">Todos</button>
                 </div>
             </div>
-            
-                
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="produto2.jpg" class="card-img-top" alt="Produto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Produto 2</h5>
-                            <p class="card-text">Descrição do produto 2.</p>
-                            <p class="card-text">Preço: R$ 59,90</p>
-                            <a href="#" class="btn btn-primary">Comprar</a>
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4" data-category="Body">
+                        <article class="card">
+                            <img src="produto1.jpg" class="card-img-top" alt="Body Infantil">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Body</h3>
+                                <p class="card-text">Descrição do produto 1.</p>
+                                <p class="card-text">Preço: R$ 49,90</p>
+                                <button type="button" class="btn btn-secondary">Adicionar ao Carrinho</button>
+                            </div>
+                        </article>
                     </div>
-                </div>
+                    <div class="col-12 col-md-6 col-lg-4" data-category="Pijama">
+                        <article class="card">
+                            <img src="produto2.jpg" class="card-img-top" alt="Pijama Infantil">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Pijama</h3>
+                                <p class="card-text">Descrição do produto 2.</p>
+                                <p class="card-text">Preço: R$ 59,90</p>
+                                <button type="button" class="btn btn-secondary">Adicionar ao Carrinho</button>
+                            </div>
+                        </article>
+                    </div>
 
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="produto3.jpg" class="card-img-top" alt="Produto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Produto 3</h5>
-                            <p class="card-text">Descrição do produto 3.</p>
-                            <p class="card-text">Preço: R$ 39,90</p>
-                            <a href="#" class="btn btn-primary">Comprar</a>
-                        </div>
+                    <div class="col-12 col-md-6 col-lg-4" data-category="tocas-luvas">
+                        <article class="card">
+                            <img src="produto3.jpg" class="card-img-top" alt="Tocas e Luvas Infantis">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Touquinhas e Luvinhas</h3>
+                                <p class="card-text">Descrição do produto 3.</p>
+                                <p class="card-text">Preço: R$ 39,90</p>
+                                <button type="button" class="btn btn-secondary">Adicionar ao Carrinho</button>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-        
+        </section>
+
+        <section class="container text-center pt-5" id="sobre">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-2">
+                    <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="img-fluid">
+                </div>
+                <div class="col-md-2">
+                    <p class="text-center">Feito para caber no colo e no coração.</p>
+                </div>
+                <div class="col-md-4 offset-md-4">
+                    <h2 class="text-center h6">Um pouquinho sobre nós</h2>
+                    <p class="text-start">
+                        A Elayne Baby nasceu do desejo de tornar cada fase ainda mais especial.
+                        Aqui, cada escolha celebra o conforto dos pequenos e a alegria de quem cuida deles.
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="bg-light py-3 mt-5">
         <div class="container text-center">
-            <p>&copy; 2024 Elayne Baby. Todos os direitos reservados.</p>
+            <div class="m-5">
+                <p>&copy; 2024 Elayne Baby. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
-    
+
 </body>
+
 </html>

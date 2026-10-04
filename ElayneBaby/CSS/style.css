@@ -1,17 +1,39 @@
+
+:root {
+    --bg-color:#ece7dd;
+    --bg-color2: #daba88;
+    --primary-color: #2e2927;
+    --secondary-color: #6b625d;
+    --tertiary-color: #b87367;
+    --quaternary-color: #421d24;
+    --quinary-color: #6F4526;
+}
 body {
-    background-color: #729dc9;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
 }
 
-h1, h2, h3 {
-    color: #163950;
+h1{
+    color: var(--quaternary-color);
+}
+
+h2, h4, h5, h6 {
+    color: var(--quaternary-color);
+    font-weight: bolder;
+}
+
+h3 {
+    color: var(--quaternary-color);
+    font-weight: 400;
 }
 
 p {
-    color: #756e6e;
+    color: var(--quinary-color);
+    font-weight: 400;
 }
 
 .phero1 {
-    color: #f0e6de;
+    color: var(--quaternary-color); 
     font-size: 19px;
     font-weight: bolder;
 }
@@ -23,19 +45,20 @@ p {
 
 .logo {
     width: auto;
-    height: 200px;
-}
-
-.imgbebe {
-    width: auto;
-    height: 400px;
+    height: 50px;
 }
 
 .navcolor {
-    color: #f1e9dd;
-    font-size: 14px;
+    color: var(--quaternary-color);
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .navbgcolor {
-    background-color: #d39d60;
+    background-color: var(--bg-color2);
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 0;
 }
