@@ -4,8 +4,8 @@
     --bg-color2: #f3f2ef;
     --quaternary-color: #000000;
     --font-title1: "Times New Roman", sans-serif;
-    --font-body: "Nunito", sans-serif;
-    --card-bg: #D8B08E;
+    --font-body: sans-serif;
+    --card-bg: #e2d8ce;
 }
 
 body, .navbar, button, a {

@@ -1,0 +1,160 @@
+
+:root {
+    --bg-color:#f3f2ef;
+    --bg-color2: #f3f2ef;
+    --card-bg: #e2d8ce;
+    --txt-inicio-destaque: #D68A82;
+    --txt-inicio-cl1: #8C7365;
+    --txt-inicio-cl2: #594337;
+    --txt-inicio-cl3: #837368;
+    --btn-inicio-bg: #D68B83;
+    --btn-inicio-txt: #FFFFFF;
+    --btn-hover-bg: #E49B93;
+    --btn-hover: #FFFFFF;
+    --quaternary-color: #000000;
+    --font-h1-inicio: "Playfair Display", "Times New Roman", serif;
+    --font-title1: "Times New Roman", serif;
+    --font-body: "Nunito", sans-serif;
+    
+}
+
+body, .navbar, button, a {
+    font-family: var(--font-body);
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--quaternary-color);
+}
+
+
+h1{
+    font-family: var(--font-title1);
+} 
+
+
+h2, h3, h4, h5, h6 {
+    font-family: var(--font-title1);
+    color: var(--quaternary-color);
+}
+
+p {
+    color: var(--quaternary-color);
+    font-weight: 400;
+}
+
+.categoria a {
+    padding: 0.75rem;
+    border-radius: 1rem;
+    background-color: var(--card-bg);
+}
+
+.categoria li:nth-child(1) a {
+    --card-bg: #f8d7da;
+}
+
+.categoria li:nth-child(2) a {
+    --card-bg: #d1ecf1;
+}
+
+.categoria li:nth-child(3) a {
+    --card-bg: #d4edda;
+}
+
+.categoria li:nth-child(4) a {
+    --card-bg: #fff3cd;
+}
+
+.hero {
+    background-image: url("../Images/inicio_foto.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    min-height: calc(100vh - 86px);
+    background-color: #F3E8DC;
+    position: relative;
+}
+
+.hero-wave path {
+    fill: var(--bg-color);
+}
+
+.hero-wave {
+    position:absolute;
+    bottom: 0em;
+    left: 0em;
+    width: 100%;
+    height: clamp(40px, 8.3vw, 110px);
+    display:block;
+
+}   
+
+.hero-destaque {
+    font-family: "Parisienne", sans-serif;
+    font-size: 2.9em;
+    color: var(--txt-inicio-destaque);
+}
+
+.hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--txt-inicio-cl1);
+}
+
+.hero-txt-inicio {
+    font-family: var(--font-h1-inicio);
+    font-size: 1.5em;
+    color: var(--txt-inicio-cl2);
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    color: var(--txt-inicio-cl2);
+}
+
+header .bi-cart3::before {
+    vertical-align: -0.1em;
+}
+
+.hero-btn .bi-arrow-right::before {
+    vertical-align: -0.28em;
+}
+
+.hero-btn {
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+}
+
+
+.hero-btn:hover {
+    color: var(--btn-hover);
+    background-color: var(--btn-hover-bg);
+}
+
+.phero1 {
+    color: var(--quaternary-color); 
+    font-size: 1.0em;
+    font-weight: bolder;
+}
+
+.phero2 {
+    color: #001c58;
+    font-size: 0.9em;
+}
+
+.logo {
+    width: auto;
+    height: 70px;
+}
+
+.navcolor {
+    color: var(--quaternary-color);
+    font-size: 1.0em;
+    font-weight: 500;
+}
+
+.navbgcolor {
+    background-color: var(--bg-color2);
+}
