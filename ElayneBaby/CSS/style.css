@@ -1,35 +1,59 @@
 
 :root {
-    --bg-color:#ece7dd;
-    --bg-color2: #daba88;
-    --primary-color: #2e2927;
-    --secondary-color: #6b625d;
-    --tertiary-color: #b87367;
-    --quaternary-color: #421d24;
-    --quinary-color: #6F4526;
+    --bg-color:#f3f2ef;
+    --bg-color2: #f3f2ef;
+    --quaternary-color: #000000;
+    --font-title1: "Times New Roman", sans-serif;
+    --font-body: "Nunito", sans-serif;
+    --card-bg: #D8B08E;
 }
+
+body, .navbar, button, a {
+    font-family: var(--font-body);
+}
+
+
 body {
     background-color: var(--bg-color);
-    color: var(--primary-color);
+    color: var(--quaternary-color);
 }
+
 
 h1{
-    color: var(--quaternary-color);
-}
+    font-family: var(--font-title1);
+} 
 
-h2, h4, h5, h6 {
-    color: var(--quaternary-color);
-    font-weight: bolder;
-}
 
-h3 {
+h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
     color: var(--quaternary-color);
-    font-weight: 400;
 }
 
 p {
-    color: var(--quinary-color);
+    color: var(--quaternary-color);
     font-weight: 400;
+}
+
+.categoria a {
+    padding: 0.75rem;
+    border-radius: 1rem;
+    background-color: var(--card-bg);
+}
+
+.categoria li:nth-child(1) a {
+    --card-bg: #f8d7da;
+}
+
+.categoria li:nth-child(2) a {
+    --card-bg: #d1ecf1;
+}
+
+.categoria li:nth-child(3) a {
+    --card-bg: #d4edda;
+}
+
+.categoria li:nth-child(4) a {
+    --card-bg: #fff3cd;
 }
 
 .phero1 {
@@ -56,9 +80,4 @@ p {
 
 .navbgcolor {
     background-color: var(--bg-color2);
-}
-
-.navbar {
-    background-color: #ffffff;
-    padding: 10px 0;
 }
