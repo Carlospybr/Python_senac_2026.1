@@ -2,6 +2,7 @@
 :root {
     --bg-color:#f3f2ef;
     --bg-color2: #f3f2ef;
+    --bg-colorprodutos: white;
     --card-bg: #e2d8ce;
     --txt-inicio-destaque: #D68A82;
     --txt-inicio-cl1: #8C7365;
@@ -11,6 +12,9 @@
     --btn-inicio-txt: #FFFFFF;
     --btn-hover-bg: #E49B93;
     --btn-hover: #FFFFFF;
+    --btn-filtro: ;
+    --btn-check: ;
+    --btn-checkbg: #B96F68 ;
     --quaternary-color: #000000;
     --font-h1-inicio: "Playfair Display", "Times New Roman", serif;
     --font-title1: "Times New Roman", serif;
@@ -24,7 +28,6 @@ body, .navbar, button, a {
 
 
 body {
-    background-color: var(--bg-color);
     color: var(--quaternary-color);
 }
 
@@ -157,4 +160,65 @@ header .bi-cart3::before {
 
 .navbgcolor {
     background-color: var(--bg-color2);
+}
+
+.navbgcolorprodutos{
+    background-color: var(--bg-colorprodutos);
+}
+
+
+#Filtro .btn-filtro1:hover{
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover);
+    transition: 0.3s;
+}
+
+#Filtro .btn-check:checked  + .btn-filtro1 {
+    background-color: var(--btn-checkbg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+    
+}
+
+#Filtro .btn-check:checked  + .btn-filtro1:hover {
+    background-color: var(--btn-checkbg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+    
+}
+
+.btn-filtro button:nth-child(1) {
+    color: var(--btn-inicio-txt);
+    
+    transition: 0.3s;
+}
+
+.btn-filtro button:nth-child(2) {
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+}
+
+.btn-filtro button:nth-child(3) {
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+}
+
+.btn-filtro button:nth-child(4) {
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+}
+
+.btn-filtro button:nth-child(5) {
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+}
+
+.btn-filtro button:nth-child(6) {
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
 }

@@ -21,49 +21,38 @@
 
 <body>
 
-    <header class="navbgcolor">
-        <div class="container d-flex justify-content-between align-items-center p-2">
+    <header class="navbgcolorprodutos">
+        <div class="container d-flex justify-content-between align-items-center p-2 border-bottom">
             <div>
                 <a href="index.html">
-                <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="img-fluid logo">
+                    <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="img-fluid logo">
                 </a>
             </div>
             <div>
                 <nav aria-label="Menu de Navegação">
                     <ul class="nav">
                         <li class="nav-item"><a class="nav-link navcolor" href="index.html">Início</a></li>
-                        <li class="nav-item"><a class="nav-link navcolor" href="#produtos1">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link navcolor" href="#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link navcolor" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link navcolor" href="produtos.html#sobre">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link navcolor" href="#">Contato</a></li>
                     </ul>
                 </nav>
             </div>
             <div>
-                <button class="btn btn-outline-primary" type="button">
-                    <i class="bi bi-cart3"></i>
-                    Carrinho de Compras <span id="carrinho-count" class="badge text-bg-primary">0</span>
-
+                <button class="btn btn-outline-primary rounded-pill" type="button">
+                    <i class="bi bi-cart3 px-1 py-1"></i>
+                    Carrinho de Compras <span id="carrinho-count"
+                        class="badge text-bg-primary mx-2 rounded-pill">0</span>
                 </button>
             </div>
         </div>
-
     </header>
 
     <main>
         <!-- Hero -->
-        <section class="container py-2 my-5" id="hero">
+        <section class="container navbgcolorprodutos" id="hero">
             <div class="row text-center align-items-center">
                 <div class="col-12 col-md-6">
-                    <p class="mb-4 fw-bold phero1">Pequenos Momentos. Grandes Memórias.</p>
-                    <h1>Bem-vindo à Elayne Baby</h1>
-                    <p class="fs-5">Um Abraço em forma de <span
-                            class="fst-italic text-primary-emphasis fw-bolder">roupinha</span>.</p>
-                    <p class="fst-italic fw-light phero2">Fabricação Própria, com materiais de alta qualidade e
-                        anti-alérgicos.</p>
-                    <a href="#categorias" class="btn btn-primary mt-3">Conheça a Nossa Coleção</a>
-                </div>
-                <div class="col-12 col-md-6">
-                    <img src="Images/bebe.png" alt="Bebê deitado no berço sorrindo" class="img-fluid m-4">
                 </div>
             </div>
         </section>
@@ -105,22 +94,47 @@
             </div>
         </section>
 
-        <section id="produtos1">
+        <section id="Filtro" class="btn-filtro" aria-label="Filtros">
             <div class="container my-5 py-5">
-                <h2>Nossos Produtos</h2>
+                <h2 class="h3">Filtros</h2>
                 <div role="group" aria-label="Filtrar produtos por categoria">
-                    <button type="button" class="btn btn-outline-primary me-2" data-filter="Body">Bodies</button>
-                    <button type="button" class="btn btn-outline-primary me-2" data-filter="Pijama">Pijamas</button>
-                    <button type="button" class="btn btn-outline-primary me-2" data-filter="tocas-luvas">Touquinhas e
-                        Luvinhas</button>
-                    <button type="button" class="btn btn-outline-secondary" data-filter="all">Todos</button>
+                    <input type="checkbox" class="btn-check" id="idade-0-3" name="idade" value="0-3">
+                    <label class="btn btn-filtro1" for="idade-0-3">
+                        0-3 Meses
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="idade-3-6" name="idade" value="3-6">
+                    <label class="btn btn-filtro1" for="idade-3-6">
+                        3-6 Meses
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="idade-6-12" name="idade" value="6-12">
+                    <label class="btn btn-filtro1" for="idade-6-12">
+                        6-12 Meses
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="sexo-masculino" name="sexo" value="Masculino">
+                    <label class="btn btn-filtro1" for="sexo-masculino">
+                        Masculino
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="sexo-feminino" name="sexo" value="Feminino">
+                    <label class="btn btn-filtro1" for="sexo-feminino">
+                        Feminino
+                    </label>
+
+                    <input type="checkbox" class="btn-check" id="todos" checked> <label class="btn btn-filtro1"
+                        for="todos">
+                        Todos os Produtos
+                    </label>
+
                 </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4" data-category="Body">
                         <article class="card">
-                            <img src="produto1.jpg" class="card-img-top" alt="Body Infantil">
+                            <img src="Images/body.jfif" class="card-img-top" alt="Body Infantil">
                             <div class="card-body">
                                 <h3 class="card-title h5">Body</h3>
                                 <p class="card-text">Descrição do produto 1.</p>
@@ -131,7 +145,7 @@
                     </div>
                     <div class="col-12 col-md-6 col-lg-4" data-category="Pijama">
                         <article class="card">
-                            <img src="produto2.jpg" class="card-img-top" alt="Pijama Infantil">
+                            <img src="Images/body.jfif" class="card-img-top" alt="Pijama Infantil">
                             <div class="card-body">
                                 <h3 class="card-title h5">Pijama</h3>
                                 <p class="card-text">Descrição do produto 2.</p>
@@ -143,7 +157,7 @@
 
                     <div class="col-12 col-md-6 col-lg-4" data-category="tocas-luvas">
                         <article class="card">
-                            <img src="produto3.jpg" class="card-img-top" alt="Tocas e Luvas Infantis">
+                            <img src="Images/body.jfif" class="card-img-top" alt="Tocas e Luvas Infantis">
                             <div class="card-body">
                                 <h3 class="card-title h5">Touquinhas e Luvinhas</h3>
                                 <p class="card-text">Descrição do produto 3.</p>
@@ -160,7 +174,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-2">
                     <a href="index.html">
-                    <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="img-fluid">
+                        <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="img-fluid">
                     </a>
                 </div>
                 <div class="col-md-2">
