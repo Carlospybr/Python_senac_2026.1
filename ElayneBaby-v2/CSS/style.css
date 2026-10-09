@@ -1,6 +1,5 @@
-
 :root {
-    --bg-color:#f3f2ef;
+    --bg-color: #f3f2ef;
     --bg-color2: #f3f2ef;
     --bg-colorprodutos: white;
     --card-bg: #e2d8ce;
@@ -14,15 +13,18 @@
     --btn-hover: #FFFFFF;
     --btn-filtro: ;
     --btn-check: ;
-    --btn-checkbg: #B96F68 ;
+    --btn-checkbg: #B96F68;
     --quaternary-color: #000000;
     --font-h1-inicio: "Playfair Display", "Times New Roman", serif;
     --font-title1: "Times New Roman", serif;
     --font-body: "Nunito", sans-serif;
-    
+
 }
 
-body, .navbar, button, a {
+body,
+.navbar,
+button,
+a {
     font-family: var(--font-body);
 }
 
@@ -32,12 +34,16 @@ body {
 }
 
 
-h1{
+h1 {
     font-family: var(--font-title1);
-} 
+}
 
 
-h2, h3, h4, h5, h6 {
+
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-title1);
     color: var(--quaternary-color);
 }
@@ -45,6 +51,14 @@ h2, h3, h4, h5, h6 {
 p {
     color: var(--quaternary-color);
     font-weight: 400;
+}
+
+.categoria div:nth-child(1) h3 {
+    font-family: var(--font-body);
+}
+
+.categoria div:nth-child(1) {
+    font-family: "Playfair Display";
 }
 
 .categoria a {
@@ -84,14 +98,14 @@ p {
 }
 
 .hero-wave {
-    position:absolute;
+    position: absolute;
     bottom: 0em;
     left: 0em;
     width: 100%;
     height: clamp(40px, 8.3vw, 110px);
-    display:block;
+    display: block;
 
-}   
+}
 
 .hero-destaque {
     font-family: "Parisienne", sans-serif;
@@ -137,7 +151,7 @@ header .bi-cart3::before {
 }
 
 .phero1 {
-    color: var(--quaternary-color); 
+    color: var(--quaternary-color);
     font-size: 1.0em;
     font-weight: bolder;
 }
@@ -162,63 +176,27 @@ header .bi-cart3::before {
     background-color: var(--bg-color2);
 }
 
-.navbgcolorprodutos{
+.navbgcolorprodutos {
     background-color: var(--bg-colorprodutos);
 }
 
 
-#Filtro .btn-filtro1:hover{
+#Filtro .btn-filtro1:hover {
     background-color: var(--btn-hover-bg);
     color: var(--btn-hover);
     transition: 0.3s;
 }
 
-#Filtro .btn-check:checked  + .btn-filtro1 {
+#Filtro .btn-check:checked+.btn-filtro1 {
     background-color: var(--btn-checkbg);
     color: var(--btn-inicio-txt);
     transition: 0.3s;
-    
+
 }
 
-#Filtro .btn-check:checked  + .btn-filtro1:hover {
+#Filtro .btn-check:checked+.btn-filtro1:hover {
     background-color: var(--btn-checkbg);
     color: var(--btn-inicio-txt);
     transition: 0.3s;
-    
-}
 
-.btn-filtro button:nth-child(1) {
-    color: var(--btn-inicio-txt);
-    
-    transition: 0.3s;
-}
-
-.btn-filtro button:nth-child(2) {
-    background-color: var(--btn-inicio-bg);
-    color: var(--btn-inicio-txt);
-    transition: 0.3s;
-}
-
-.btn-filtro button:nth-child(3) {
-    background-color: var(--btn-inicio-bg);
-    color: var(--btn-inicio-txt);
-    transition: 0.3s;
-}
-
-.btn-filtro button:nth-child(4) {
-    background-color: var(--btn-inicio-bg);
-    color: var(--btn-inicio-txt);
-    transition: 0.3s;
-}
-
-.btn-filtro button:nth-child(5) {
-    background-color: var(--btn-inicio-bg);
-    color: var(--btn-inicio-txt);
-    transition: 0.3s;
-}
-
-.btn-filtro button:nth-child(6) {
-    background-color: var(--btn-inicio-bg);
-    color: var(--btn-inicio-txt);
-    transition: 0.3s;
 }

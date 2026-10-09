@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site de Elayne Baby, loja de roupas infantis.">
-    <title>Elayne Baby</title>
+    <title>Produtos | Elayne Baby</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,10 +13,18 @@
     <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="JavaScript/filtro.js" defer></script>
 </head>
 
 <body>
@@ -50,17 +58,17 @@
 
     <main>
         <!-- Hero -->
-        <section class="container navbgcolorprodutos" id="hero">
+        <div class="container navbgcolorprodutos" id="hero">
             <div class="row text-center align-items-center">
                 <div class="col-12 col-md-6">
                 </div>
             </div>
-        </section>
+        </div>
 
         <section class="py-2 my-5 container categoria" id="categorias">
             <div class="text-center">
-                <p class="fs-6 ">ESCOLHA POR CATEGORIA</p>
-                <h2 class="mb-4">Amor e Cuidado para cada Fase</h2>
+                <h2 class="fs-6">ESCOLHA POR CATEGORIA</h2>
+                <p class="mb-4 h2">Amor e Cuidado para cada Fase</p>
                 <ul class="row list-unstyled nav g-3 text-center">
                     <li class="col-12 col-md-6 col-lg-3">
                         <a class="nav-link" href="#bodies">
@@ -94,80 +102,95 @@
             </div>
         </section>
 
-        <section id="Filtro" class="btn-filtro" aria-label="Filtros">
-            <div class="container my-5 py-5">
-                <h2 class="h3">Filtros</h2>
-                <div role="group" aria-label="Filtrar produtos por categoria">
-                    <input type="checkbox" class="btn-check" id="idade-0-3" name="idade" value="0-3">
-                    <label class="btn btn-filtro1" for="idade-0-3">
-                        0-3 Meses
-                    </label>
-
-                    <input type="checkbox" class="btn-check" id="idade-3-6" name="idade" value="3-6">
-                    <label class="btn btn-filtro1" for="idade-3-6">
-                        3-6 Meses
-                    </label>
-
-                    <input type="checkbox" class="btn-check" id="idade-6-12" name="idade" value="6-12">
-                    <label class="btn btn-filtro1" for="idade-6-12">
-                        6-12 Meses
-                    </label>
-
-                    <input type="checkbox" class="btn-check" id="sexo-masculino" name="sexo" value="Masculino">
-                    <label class="btn btn-filtro1" for="sexo-masculino">
-                        Masculino
-                    </label>
-
-                    <input type="checkbox" class="btn-check" id="sexo-feminino" name="sexo" value="Feminino">
-                    <label class="btn btn-filtro1" for="sexo-feminino">
-                        Feminino
-                    </label>
-
-                    <input type="checkbox" class="btn-check" id="todos" checked> <label class="btn btn-filtro1"
-                        for="todos">
-                        Todos os Produtos
-                    </label>
-
-                </div>
-            </div>
+        <section class="d-flex justify-content-center btn-filtro align-items-center my-5 py-5" id="Filtro"
+            aria-label="Filtros">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4" data-category="Body">
-                        <article class="card">
-                            <img src="Images/body.jfif" class="card-img-top" alt="Body Infantil">
-                            <div class="card-body">
-                                <h3 class="card-title h5">Body</h3>
-                                <p class="card-text">Descrição do produto 1.</p>
-                                <p class="card-text">Preço: R$ 49,90</p>
-                                <button type="button" class="btn btn-secondary">Adicionar ao Carrinho</button>
-                            </div>
-                        </article>
+                    <div class="col-md-12 mb-1 text-start">
+                        <h2 class="h3">Filtros</h2>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4" data-category="Pijama">
-                        <article class="card">
-                            <img src="Images/body.jfif" class="card-img-top" alt="Pijama Infantil">
-                            <div class="card-body">
-                                <h3 class="card-title h5">Pijama</h3>
-                                <p class="card-text">Descrição do produto 2.</p>
-                                <p class="card-text">Preço: R$ 59,90</p>
-                                <button type="button" class="btn btn-secondary">Adicionar ao Carrinho</button>
-                            </div>
-                        </article>
+                    <div class="col-md-4">
+                        <div role="group" aria-label="Filtro de Idade">
+                            <span class="d-block text-muted mb-1 border-end border-secondary">Idade</span>
+                            <input type="checkbox" class="btn-check" id="idade-0-3" name="idade" value="0-3">
+                            <label class="btn btn-filtro1" for="idade-0-3">
+                                0-3 Meses
+                            </label>
+
+                            <input type="checkbox" class="btn-check" id="idade-3-6" name="idade" value="3-6">
+                            <label class="btn btn-filtro1" for="idade-3-6">
+                                3-6 Meses
+                            </label>
+
+                            <input type="checkbox" class="btn-check" id="idade-6-12" name="idade" value="6-12">
+                            <label class="btn btn-filtro1" for="idade-6-12">
+                                6-12 Meses
+                            </label>
+                        </div>
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-4" data-category="tocas-luvas">
-                        <article class="card">
-                            <img src="Images/body.jfif" class="card-img-top" alt="Tocas e Luvas Infantis">
-                            <div class="card-body">
-                                <h3 class="card-title h5">Touquinhas e Luvinhas</h3>
-                                <p class="card-text">Descrição do produto 3.</p>
-                                <p class="card-text">Preço: R$ 39,90</p>
-                                <button type="button" class="btn btn-secondary">Adicionar ao Carrinho</button>
-                            </div>
-                        </article>
+                    <div class="col-md-4">
+                        <span class="d-block text-muted mb-1" role="group" aria-label="Filtro de Sexo">Sexo</span>
+                        <input type="checkbox" class="btn-check" id="sexo-masculino" name="sexo" value="M">
+                        <label class="btn btn-filtro1" for="sexo-masculino">
+                            Masculino
+                        </label>
+
+                        <input type="checkbox" class="btn-check" id="sexo-feminino" name="sexo" value="F">
+                        <label class="btn btn-filtro1" for="sexo-feminino">
+                            Feminino
+                        </label>
                     </div>
+
+                    <div class="col-md-2">
+                        <br>
+                        <input type="checkbox" class="btn-check" id="todos" checked> <label class="btn btn-filtro1"
+                            for="todos">
+                            Todos os Produtos
+                        </label>
+                    </div>
+
                 </div>
             </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <p id="sem-resultados" class="text-center text-muted my-5 d-none">
+                        Nenhum produto encontrado para esses filtros.
+                    </p>
+                <div class="col-12 col-md-6 col-lg-4" data-category="Body" data-idade="0-3" data-sexo="M F">
+                    <article class="card">
+                        <img src="Images/body.jfif" class="card-img-top" alt="Body Infantil">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Body</h3>
+                            <p class="card-text">Descrição do produto 1.</p>
+                            <p class="card-text">Preço: R$ 49,90</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4" data-category="Pijama" data-idade="6-12" data-sexo="M">
+                    <article class="card">
+                        <img src="Images/body.jfif" class="card-img-top" alt="Pijama Infantil">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Pijama</h3>
+                            <p class="card-text">Descrição do produto 2.</p>
+                            <p class="card-text">Preço: R$ 59,90</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4" data-category="tocas-luvas" data-idade="3-6" data-sexo="F">
+                    <article class="card">
+                        <img src="Images/body.jfif" class="card-img-top" alt="Tocas e Luvas Infantis">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Touquinhas e Luvinhas</h3>
+                            <p class="card-text">Descrição do produto 3.</p>
+                            <p class="card-text">Preço: R$ 39,90</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
         </section>
 
         <section class="container text-center py-5 my-5" id="sobre">
@@ -194,7 +217,7 @@
     <footer class="bg-light py-3 mt-5">
         <div class="container text-center">
             <div class="m-5">
-                <p>&copy; 2024 Elayne Baby. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Elayne Baby. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
