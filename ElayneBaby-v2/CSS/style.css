@@ -18,6 +18,9 @@
     --font-h1-inicio: "Playfair Display", "Times New Roman", serif;
     --font-title1: "Times New Roman", serif;
     --font-body: "Nunito", sans-serif;
+    --espaco-bloco: 1.5rem;
+    --espaco-secao: 10rem;
+    --espaco-interno: 1rem 1.5rem;
 
 }
 
@@ -81,6 +84,79 @@ p {
 
 .categoria li:nth-child(4) a {
     --card-bg: #fff3cd;
+}
+
+.hero-eyebrow-sobre {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--txt-inicio-cl1);
+}
+
+
+.sobre {
+    background-image: url("../Images/Elayne\ Baby\ Nursery\ Dreamscape.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    min-height: calc(100vh - 86px);
+    background-color: #ebddce;
+    position: relative;
+    padding-block: 3rem 7rem;
+    /* folga no topo e antes da onda */
+}
+
+
+.sobre h1,
+.sobre h2,
+.sobre h3 {
+    width: fit-content;
+    max-width: 100%;
+    margin: var(--espaco-secao) auto var(--espaco-bloco);
+    padding: var(--espaco-interno);
+    border-radius: 1rem;
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+}
+
+.sobre p {
+    margin: 0 0 var(--espaco-bloco);
+    padding: var(--espaco-interno);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+}
+
+/* Caixa que agrupa vários parágrafos de uma mesma ideia */
+.sobre .caixa-texto {
+    margin: 0 0 var(--espaco-bloco);
+    padding: var(--espaco-interno);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+}
+
+/* Parágrafos dentro da caixa: sem fundo próprio */
+.sobre .caixa-texto p {
+    margin: 0 0 1rem;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+}
+
+/* Subtítulos dentro da caixa */
+.sobre .caixa-texto h4 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--txt-inicio-cl2);
+}
+
+/* Primeiro e último elemento não deixam espaço sobrando na caixa */
+.sobre .caixa-texto > :first-child {
+    margin-top: 0;
+}
+
+.sobre .caixa-texto > :last-child {
+    margin-bottom: 0;
 }
 
 .hero {
@@ -180,6 +256,26 @@ header .bi-cart3::before {
     background-color: var(--bg-colorprodutos);
 }
 
+#Filtro-categoria .btn-filtro1:hover {
+    background-color: var(--btn-hover-bg);
+    color: var(--btn-hover);
+    transition: 0.3s;
+}
+
+#Filtro-categoria .btn-check:checked+.btn-filtro1 {
+    background-color: var(--btn-checkbg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+
+}
+
+#Filtro-categoria .btn-check:checked+.btn-filtro1:hover {
+    background-color: var(--btn-checkbg);
+    color: var(--btn-inicio-txt);
+    transition: 0.3s;
+
+}
+
 
 #Filtro .btn-filtro1:hover {
     background-color: var(--btn-hover-bg);
@@ -199,4 +295,315 @@ header .bi-cart3::before {
     color: var(--btn-inicio-txt);
     transition: 0.3s;
 
+}
+
+/* ===== Cartões de categoria: estados ===== */
+
+/* Base: define quais propriedades têm animação */
+.categoria a {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover: só em dispositivos com mouse */
+@media (hover: hover) {
+    .categoria a:hover {
+        transform: translateY(-4px);
+        transition: 0.3s;
+        box-shadow: 0 10px 16px rgba(89, 67, 55, 0.30);
+    }
+}
+
+/* Clique (enquanto o botão está pressionado) */
+.categoria a:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 6px rgba(89, 67, 55, 0.15);
+}
+
+/* Selecionado */
+.categoria a[aria-current="true"] {
+    box-shadow: 0 0 0 2px var(--btn-checkbg),
+        0 15px 14px rgba(185, 111, 104, 0.25);
+}
+
+/* Selecionado + hover */
+@media (hover: hover) {
+    .categoria a[aria-current="true"]:hover {
+        box-shadow: 0 0 0 2px var(--btn-checkbg),
+            0 17px 20px rgba(185, 111, 104, 0.35);
+    }
+}
+
+/* Foco pelo teclado (tecla Tab) */
+.categoria a:focus-visible {
+    outline: 3px solid var(--btn-checkbg);
+    outline-offset: 3px;
+}
+
+/* Quem pediu "reduzir movimento" no sistema não vê o cartão se mover */
+@media (prefers-reduced-motion: reduce) {
+    .categoria a {
+        transition: none;
+    }
+
+    .categoria a:hover,
+    .categoria a:active {
+        transform: none;
+    }
+}
+
+/* ===== Página Contato: cartões ===== */
+.sobre .contato-card {
+    height: 100%;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contato-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+    font-size: 1.5rem;
+}
+
+.sobre .contato-card h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--txt-inicio-cl2);
+}
+
+/* Anula o fundo branco que .sobre p daria a cada parágrafo */
+.sobre .contato-card p {
+    margin: 0 0 1rem;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    color: var(--txt-inicio-cl2);
+}
+
+.sobre .contato-card > :last-child {
+    margin-bottom: 0;
+}
+
+@media (hover: hover) {
+    .sobre .contato-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 16px rgba(89, 67, 55, 0.30);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sobre .contato-card {
+        transition: none;
+    }
+
+    .sobre .contato-card:hover {
+        transform: none;
+    }
+}
+
+/* =====================================================================
+   PÁGINA SOBRE: resumo no topo, texto completo no fim
+   Cole este bloco no FIM do CSS/style.css.
+
+   ANTES DE COLAR, apague do style.css esta regra antiga (ela pintaria
+   o título do topo de rosa e briga com o novo visual):
+
+   .sobre div:nth-child(1) h1 {
+       background-color: var(--btn-inicio-bg);
+       color: var(--btn-inicio-txt);
+   }
+   (a regra ".sobre h1, .sobre h2, .sobre h3" já cuida das pílulas rosa)
+   ===================================================================== */
+
+/* Rolagem suave ao clicar nos botões do topo (respeita quem pediu menos movimento) */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* ----- Títulos "limpos": anulam a pílula rosa de .sobre h1/h2/h3 ----- */
+.sobre .sobre-titulo,
+.sobre .sobre-card-titulo {
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    font-family: var(--font-h1-inicio);
+    color: var(--txt-inicio-cl2);
+}
+
+.sobre .sobre-titulo {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+}
+
+.sobre .sobre-titulo-hero {
+    max-width: 760px;
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    line-height: 1.15;
+}
+
+.sobre .sobre-card-titulo {
+    margin: 0 0 0.5rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+/* ----- Topo ----- */
+.sobre-eyebrow {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--btn-checkbg);
+}
+
+/* .sobre p daria fundo branco; aqui o parágrafo fica solto */
+.sobre .sobre-lead {
+    max-width: 640px;
+    margin: 0 auto 1.5rem;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--txt-inicio-cl2);
+}
+
+.hero-btn .bi-arrow-down::before {
+    vertical-align: -0.28em;
+}
+
+.sobre-aviso {
+    padding: 0.875rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+    color: var(--txt-inicio-cl2);
+    text-align: left;
+}
+
+.sobre-aviso .bi {
+    font-size: 1.25rem;
+    color: var(--btn-checkbg);
+}
+
+/* ----- Seções de resumo ----- */
+.sobre .sobre-secao {
+    margin-top: 4.5rem;
+}
+
+/* Foto (ou espaço reservado) ao lado da linha do tempo */
+.sobre-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 320px;
+    padding: 2rem;
+    border: 2px dashed var(--btn-checkbg);
+    border-radius: 1.5rem;
+    background-color: #e7d5c4;
+    color: var(--txt-inicio-cl1);
+    font-weight: 700;
+    text-align: center;
+}
+
+.sobre-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+/* Linha do tempo */
+.sobre-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+}
+
+.sobre-ponto {
+    flex: 0 0 14px;
+    height: 14px;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--btn-inicio-bg);
+}
+
+/* Cartões (Sobre nós e Como trabalhamos) */
+.sobre .sobre-card {
+    height: 100%;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+}
+
+.sobre .sobre-card p,
+.sobre .sobre-item p {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    color: var(--txt-inicio-cl2);
+}
+
+.sobre-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background-color: var(--btn-inicio-bg);
+    color: var(--btn-inicio-txt);
+    font-size: 1.5rem;
+}
+
+.sobre-numero {
+    display: block;
+    font-family: var(--font-h1-inicio);
+    font-size: 2.125rem;
+    line-height: 1.2;
+    color: var(--btn-checkbg);
+}
+
+/* Faixa rosa de chamada */
+.sobre .sobre-cta {
+    padding: 2.5rem 1.5rem;
+    background-color: var(--btn-inicio-bg);
+    border-radius: 1.75rem;
+}
+
+.sobre .sobre-cta .sobre-titulo {
+    color: var(--btn-inicio-txt);
+}
+
+.sobre-cta-btn {
+    background-color: #fff;
+    color: var(--txt-inicio-cl2);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.sobre-cta-btn:hover {
+    background-color: var(--bg-color);
+    color: var(--txt-inicio-cl2);
 }

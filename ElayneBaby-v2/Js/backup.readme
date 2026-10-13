@@ -1,0 +1,22 @@
+const checkboxes = document.querySelectorAll(".btn-check");
+const produtos = document.querySelectorAll("[data-idade]");
+const todos = document.getElementById("todos");
+const semResultado = document.getElementById("sem-resultados");
+
+
+function pegarMarcados(nome) {
+    const marcados = document.querySelectorAll('input[name="' + nome + '"]:checked');
+    return Array.from(marcados).map(function (caixa) {
+        return caixa.value;
+    });
+}
+
+function passaNoGrupo(dadoDoCard, marcados) {
+    if (marcados.length === 0 ) {
+        return true;
+    }
+    const valoresDoCard = dadoDoCard.split(" ");
+    return marcados.some(function (valor) {
+        return valoresDoCard.includes(valor);
+    });
+}

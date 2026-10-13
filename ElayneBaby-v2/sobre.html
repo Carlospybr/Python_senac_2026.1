@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site de Elayne Baby, loja de roupas infantis.">
+    <title>Elayne Baby</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parisienne&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <header class="navbgcolor">
+        <div class="container d-flex justify-content-between align-items-center p-2">
+            <div>
+                <a href="index.html">
+                    <img src="Images/Logo_sem_fundo.png" alt="Logo Elayne Baby" class="img-fluid logo">
+                </a>
+            </div>
+            <div>
+                <nav aria-label="Menu de Navegação">
+                    <ul class="nav">
+                        <li class="nav-item"><a class="nav-link navcolor" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link navcolor" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link navcolor" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link navcolor" href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <button class="btn btn-outline-primary rounded-pill" type="button">
+                    <i class="bi bi-cart3 px-1 py-1"></i>
+                    Carrinho de Compras <span id="carrinho-count"
+                        class="badge text-bg-primary mx-2 rounded-pill">0</span>
+
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="sobre">
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row">
+
+                    <!-- ===== TOPO: título, botões e observação ===== -->
+                    <div class="col-12 text-center sobre-hero">
+                        <span class="sobre-eyebrow">Sobre a Elayne Baby</span>
+                        <h1 class="sobre-titulo sobre-titulo-hero">Costura que começou em família</h1>
+                        <p class="sobre-lead">
+                            Mais de 20 anos confeccionando roupas para bebês, com produção própria e clientes em
+                            diversas regiões do Brasil.
+                        </p>
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a class="btn hero-btn px-4 py-2 rounded-pill gap-2 d-inline-flex align-items-center"
+                                href="#historia">
+                                Nossa História
+                                <i class="bi bi-arrow-down fs-6 lh-1"></i>
+                            </a>
+                            <a class="btn hero-btn px-4 py-2 rounded-pill gap-2 d-inline-flex align-items-center"
+                                href="#sobrenos">
+                                Sobre nós
+                                <i class="bi bi-arrow-down fs-6 lh-1"></i>
+                            </a>
+                            <a class="btn hero-btn px-4 py-2 rounded-pill gap-2 d-inline-flex align-items-center"
+                                href="#comotrabalhamos">
+                                Como trabalhamos
+                                <i class="bi bi-arrow-down fs-6 lh-1"></i>
+                            </a>
+                        </div>
+
+                        <div class="sobre-aviso d-inline-flex align-items-center gap-2 mt-4" role="note">
+                            <i class="bi bi-info-circle"></i>
+                            <span>As informações desta página são um <strong>resumo</strong>. Clique em um dos botões
+                                acima para ler com mais detalhes.</span>
+                        </div>
+                    </div>
+
+                    <!-- ===== RESUMO: Nossa História (foto + linha do tempo) ===== -->
+                    <div class="col-12 sobre-secao">
+                        <div class="row g-4 align-items-stretch">
+                            <div class="col-lg-5">
+                                <!-- Troque este bloco pela foto real, por exemplo:
+                                     <img src="Images/SUA_FOTO.png" alt="Descreva a foto" class="img-fluid"> -->
+                                <div class="sobre-foto">[FOTO: ateliê, tecidos ou Elaine costurando]</div>
+                            </div>
+                            <div class="col-lg-7">
+                                <h2 class="sobre-titulo text-center text-lg-start">Nossa História</h2>
+
+                                <div class="sobre-item">
+                                    <span class="sobre-ponto" aria-hidden="true"></span>
+                                    <div>
+                                        <h3 class="sobre-card-titulo">Dona Marlene</h3>
+                                        <p>Mãe de Elaine, trabalhava com costura e fazia desde panos de prato até
+                                            vestidos elaborados.</p>
+                                    </div>
+                                </div>
+
+                                <div class="sobre-item">
+                                    <span class="sobre-ponto" aria-hidden="true"></span>
+                                    <div>
+                                        <h3 class="sobre-card-titulo">O primeiro body</h3>
+                                        <p>Ainda jovem, Elaine desenhou, elaborou e costurou seu primeiro body
+                                            infantil.</p>
+                                    </div>
+                                </div>
+
+                                <div class="sobre-item">
+                                    <span class="sobre-ponto" aria-hidden="true"></span>
+                                    <div>
+                                        <h3 class="sobre-card-titulo">Mais de 20 anos</h3>
+                                        <p>A costura segue na origem do negócio, que atende clientes de diferentes
+                                            regiões do Brasil.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== RESUMO: Sobre nós (3 cartões) ===== -->
+                    <div class="col-12 sobre-secao">
+                        <h2 class="sobre-titulo text-center">Sobre nós</h2>
+                        <div class="row g-4 text-center">
+                            <div class="col-md-4">
+                                <div class="sobre-card">
+                                    <span class="sobre-icone"><i class="bi bi-scissors"></i></span>
+                                    <h3 class="sobre-card-titulo">Produção própria</h3>
+                                    <p>Bodies, pijamas, luvinhas, touquinhas e outras peças infantis.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="sobre-card">
+                                    <span class="sobre-icone"><i class="bi bi-brightness-high"></i></span>
+                                    <h3 class="sobre-card-titulo">Tecidos variados</h3>
+                                    <p>Algodão 100% conforme o modelo, opções peluciadas e tecidos que brilham no
+                                        escuro.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="sobre-card">
+                                    <span class="sobre-icone"><i class="bi bi-shop"></i></span>
+                                    <h3 class="sobre-card-titulo">Para lojistas</h3>
+                                    <p>Fornecimento para lojas, com atenção à confecção e preços justos e
+                                        competitivos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== RESUMO: Como trabalhamos (4 passos) ===== -->
+                    <div class="col-12 sobre-secao">
+                        <h2 class="sobre-titulo text-center">Como trabalhamos</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="sobre-card">
+                                    <span class="sobre-numero">01</span>
+                                    <h3 class="sobre-card-titulo">Produção e variedade</h3>
+                                    <p>Diferentes tecidos e acabamentos.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="sobre-card">
+                                    <span class="sobre-numero">02</span>
+                                    <h3 class="sobre-card-titulo">Atenção à confecção</h3>
+                                    <p>Materiais e acabamento cuidadosos.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="sobre-card">
+                                    <span class="sobre-numero">03</span>
+                                    <h3 class="sobre-card-titulo">Fornecimento para lojistas</h3>
+                                    <p>Condições que fazem sentido para o negócio.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="sobre-card">
+                                    <span class="sobre-numero">04</span>
+                                    <h3 class="sobre-card-titulo">Experiência no segmento</h3>
+                                    <p>Mais de 20 anos em roupas para bebês.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== FAIXA ROSA: chamada para o Contato ===== -->
+                    <div class="col-12 sobre-secao">
+                        <div class="sobre-cta text-center">
+                            <h2 class="sobre-titulo">Quer conhecer os modelos disponíveis?</h2>
+                            <a class="btn sobre-cta-btn px-4 py-2 rounded-pill" href="contato.html">
+                                Fale com a nossa equipe
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ===== FIM DA PÁGINA: texto completo (os botões do topo vêm para cá) ===== -->
+                    <div class="col-12 sobre-secao text-center">
+                        <h2 class="sobre-titulo">Leia com mais detalhes</h2>
+                        <p class="sobre-lead">Cada botão do topo leva até um dos blocos abaixo.</p>
+                    </div>
+
+                    <div class="col-md-12 text-break">
+
+                        <!-- ===== Nossa História ===== -->
+                        <div class="text-center" id="historia">
+                            <h3 class="hero-eyebrow-sobre h4 fw-bold">
+                                Nossa História
+                            </h3>
+
+                            <div class="caixa-texto">
+                                <p class="hero-eyebrow fs-5">A história da <span class="fw-bold">Elayne
+                                        Baby</span> começa antes mesmo de a empresa existir.</p>
+
+                                <p class="hero-subtitle fs-5">
+                                    Dona Marlene, mãe de Elaine, trabalhava com costura e confeccionava peças variadas,
+                                    desde panos de prato até vestidos mais elaborados. Foi nesse ambiente familiar,
+                                    cercado por tecidos, linhas e trabalho manual, que Elaine também desenvolveu suas
+                                    habilidades com a costura.
+                                </p>
+
+                                <p class="hero-subtitle fs-5">
+                                    Ainda jovem, Elaine encontrou um caminho próprio dentro desse ofício ao desenhar,
+                                    elaborar e costurar seu primeiro body infantil. A experiência despertou seu
+                                    interesse pela confecção de roupas para bebês e marcou o início de uma trajetória
+                                    profissional voltada a esse segmento.
+                                </p>
+
+                                <p class="hero-subtitle fs-5">
+                                    Desde então, Elaine passou a dedicar seu trabalho às peças infantis, transformando
+                                    uma habilidade que já fazia parte de sua vida em sua atividade profissional. Ao
+                                    longo de mais de 20 anos no ramo, construiu a trajetória da Elayne Baby, ampliando
+                                    sua atuação e atendendo clientes de diferentes regiões do Brasil.
+                                </p>
+
+                                <p class="hero-subtitle fs-5">
+                                    A costura continua presente na origem e no trabalho da empresa. O que começou como
+                                    parte da rotina de uma família tornou-se a base de um negócio dedicado à confecção
+                                    e ao fornecimento de roupas para bebês.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ===== Sobre nós ===== -->
+                        <div class="text-center" id="sobrenos">
+                            <h3 class="hero-eyebrow-sobre h4 fw-bold">
+                                Sobre nós
+                            </h3>
+
+                            <div class="caixa-texto">
+                                <p class="hero-subtitle fs-5">
+                                    A Elayne Baby é uma empresa especializada na confecção de roupas para bebês, com
+                                    mais de 20 anos de atuação no segmento. Com produção própria, desenvolve peças que
+                                    atendem às necessidades do vestuário infantil e fornece produtos para lojas que
+                                    trabalham com esse público.
+                                </p>
+
+                                <p class="hero-subtitle fs-5">
+                                    O catálogo inclui bodies, pijamas, luvinhas, touquinhas e outros itens de vestuário
+                                    infantil, com diferentes tecidos, modelos e acabamentos. Há peças confeccionadas em
+                                    algodão 100%, conforme o modelo, além de opções peluciadas e tecidos com efeitos que
+                                    brilham no escuro.
+                                </p>
+
+                                <p class="hero-subtitle fs-5">
+                                    Ao longo de sua trajetória, a empresa atendeu clientes de diversas regiões do
+                                    Brasil. Essa experiência acompanha o trabalho da Elayne Baby no desenvolvimento de
+                                    produtos e no fornecimento para o comércio, com atenção à qualidade da confecção e
+                                    à oferta de preços justos e competitivos.
+                                </p>
+
+                                <p class="hero-subtitle fs-5">
+                                    A Elayne Baby mantém suas raízes na costura e segue dedicada à produção de roupas
+                                    infantis, atendendo lojistas e pessoas interessadas em seus produtos.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ===== Como trabalhamos ===== -->
+                        <div class="text-center" id="comotrabalhamos">
+                            <h3 class="hero-eyebrow-sobre h4 fw-bold">
+                                Como trabalhamos
+                            </h3>
+
+                            <div class="caixa-texto">
+                                <p class="hero-subtitle fs-5">
+                                    A Elayne Baby atua na confecção e no fornecimento de roupas para bebês, com
+                                    produção própria e um catálogo voltado ao vestuário infantil. Nosso trabalho atende
+                                    especialmente lojas que buscam produtos para comercialização e reposição de seus
+                                    estoques.
+                                </p>
+
+                                <h4>Produção e variedade de produtos</h4>
+                                <p class="hero-subtitle fs-5">
+                                    Confeccionamos bodies, pijamas, luvinhas, touquinhas e outras peças infantis.
+                                    Trabalhamos com diferentes tecidos e acabamentos, incluindo modelos em algodão 100%,
+                                    conforme a composição de cada peça, opções peluciadas e materiais com efeitos que
+                                    brilham no escuro.
+                                </p>
+
+                                <h4>Atenção à confecção</h4>
+                                <p class="hero-subtitle fs-5">
+                                    A escolha dos materiais e a qualidade do acabamento são aspectos importantes na
+                                    produção. As características de cada produto dependem do modelo e dos materiais
+                                    utilizados, por isso buscamos apresentar nossas peças de acordo com suas
+                                    especificações.
+                                </p>
+
+                                <h4>Fornecimento para lojistas</h4>
+                                <p class="hero-subtitle fs-5">
+                                    Conhecemos a importância de contar com produtos adequados ao público da loja e
+                                    condições comerciais que façam sentido para o negócio. Por isso, nossa atuação
+                                    combina variedade de peças, experiência na confecção infantil e uma proposta de
+                                    preços justos e competitivos.
+                                </p>
+
+                                <h4>Experiência no segmento</h4>
+                                <p class="hero-subtitle fs-5">
+                                    Com mais de 20 anos de atuação e clientes atendidos em diversas regiões do Brasil,
+                                    a Elayne Baby mantém seu trabalho direcionado à confecção e ao fornecimento de
+                                    roupas para bebês, buscando atender às necessidades de quem comercializa esses
+                                    produtos.
+                                </p>
+
+                                <p class="hero-subtitle fs-5">
+                                    Para conhecer os modelos disponíveis e as condições de fornecimento, entre em
+                                    contato com nossa equipe.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12 text-center m-2 p-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,60 C240,110 480,110 720,70 C960,30 1200,30 1440,70 L1440,120 L0,120 Z"></path>
+        </svg>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+
+</html>
