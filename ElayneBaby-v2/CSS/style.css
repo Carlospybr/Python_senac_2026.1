@@ -151,11 +151,11 @@ p {
 }
 
 /* Primeiro e último elemento não deixam espaço sobrando na caixa */
-.sobre .caixa-texto > :first-child {
+.sobre .caixa-texto> :first-child {
     margin-top: 0;
 }
 
-.sobre .caixa-texto > :last-child {
+.sobre .caixa-texto> :last-child {
     margin-bottom: 0;
 }
 
@@ -389,7 +389,7 @@ header .bi-cart3::before {
     color: var(--txt-inicio-cl2);
 }
 
-.sobre .contato-card > :last-child {
+.sobre .contato-card> :last-child {
     margin-bottom: 0;
 }
 
@@ -606,4 +606,21 @@ header .bi-cart3::before {
 .sobre-cta-btn:hover {
     background-color: var(--bg-color);
     color: var(--txt-inicio-cl2);
+}
+
+.sobre-item {
+        transition: 0.2s,
+        filter 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sobre-secao:has(.sobre-item:hover) .sobre-item:not(:hover) {
+    filter: blur(0.3px);
+    opacity: 0.6;
+}
+
+.sobre-item:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
