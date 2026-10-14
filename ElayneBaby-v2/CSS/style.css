@@ -624,3 +624,65 @@ header .bi-cart3::before {
     transform: scale(1.04);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
+/* Efeito de deslizar para a direita ao trocar de página */
+@view-transition {
+    navigation: auto;
+}
+
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    @view-transition {
+        navigation: none;
+    }
+}
+
+/* ===== Animações suaves (deslize curto + fade) ===== */
+@keyframes sair-para-esquerda  { to   { opacity: 0; transform: translateX(-40px); } }
+@keyframes entrar-pela-direita { from { opacity: 0; transform: translateX(40px); } }
+@keyframes sair-para-direita   { to   { opacity: 0; transform: translateX(40px); } }
+@keyframes entrar-pela-esquerda{ from { opacity: 0; transform: translateX(-40px); } }
+
+/* Indo para uma página à DIREITA no menu */
+html:active-view-transition-type(avancando)::view-transition-old(root) {
+    animation: 350ms ease both sair-para-esquerda;
+}
+html:active-view-transition-type(avancando)::view-transition-new(root) {
+    animation: 350ms ease both entrar-pela-direita;
+}
+
+/* Indo para uma página à ESQUERDA no menu */
+html:active-view-transition-type(voltando)::view-transition-old(root) {
+    animation: 350ms ease both sair-para-direita;
+}
+html:active-view-transition-type(voltando)::view-transition-new(root) {
+    animation: 350ms ease both entrar-pela-esquerda;
+}
+
+/* A barra do menu fica parada (não desliza com a página) */
+.navbgcolor {
+    view-transition-name: cabecalho;
+}
+
+/* ===== Underline do menu ===== */
+.nav-link.navcolor {
+    position: relative;
+}
+
+.nav-underline {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 2px;
+    height: 3px;
+    border-radius: 999px;
+    background: currentColor; /* usa a cor do texto do link; troque se quiser */
+    view-transition-name: nav-underline;
+}
+
+/* Movimento do underline entre os itens */
+::view-transition-group(nav-underline) {
+    animation-duration: 450ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
