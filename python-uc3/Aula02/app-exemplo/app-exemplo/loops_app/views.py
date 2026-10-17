@@ -2,6 +2,10 @@ from django.shortcuts import render
 
 # Create your views here.
 
+def index (request):
+    return render(request, 'loops_app/index.html')
+
+
 def pagina_for(request):
     # 1. Iterando sobre listas e range no Python (Backend)
     frutas = ["Maçã", "Banana", "Cereja", "Morango"]
@@ -21,4 +25,4 @@ def pagina_for(request):
         'numero': numero,
         'tabuada': tabuada,
     }
-    return render(request, 'loops_app/exemplo_for.html', contexto)
+    return render(request, 'loops_app/index.html', contexto)
