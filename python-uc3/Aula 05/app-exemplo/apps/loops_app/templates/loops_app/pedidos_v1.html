@@ -63,21 +63,30 @@
         {% endfor %}
         </ul>
 
-        <ul>
-        {% for qt in qt_unicos %}
-            <li>
-                produto : {{item.qt_unicos}}
-                Quantidade : {{item.qt_unicos}}
-            </li>
-        <hr>
-
-        {% endfor %}
-        </ul>
-
     </div>
     <div class="col-12 text-end align-items-center">
         <h4> Valor total: {{ total }} </h4>
         <hr>
+    
+        <table>
+                <thead class="border bg-dark text-light">
+
+                    <td> Produtos Unicos </td>
+
+                </thead>
+
+                {% for unico in unicos %}
+
+                        <tr class="border"><td> {{ unico }} </td></tr>
+
+                {% endfor %}
+
+                <tr class="border bg-dark text-light"><td>Qt Unicos</td></tr>
+                <tr class="border"><td>{{qt_unicos}}</td></tr>
+
+
+        </table>
+
     </div>
 
 </div>
