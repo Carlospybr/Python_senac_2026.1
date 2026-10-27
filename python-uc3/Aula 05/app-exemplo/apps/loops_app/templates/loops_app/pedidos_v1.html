@@ -50,40 +50,32 @@
 
     <div class="col-8">
 
-        <h3> Lista de Compras </h3><hr>
-
+        <h3>Lista de Compra</h3><hr>
         <ul>
         {% for item in produtos %}
-        <li>
-            Produto: {{item.produto}} - preço: {{item.preco}}       
-            quantidade: {{item.quantidade}} - subtotal: {{item.subtotal}}
-            
-        </li>
-
+            <li>
+                Produto: {{ item.produto }} - Preço: R$ {{ item.preco }} - 
+                Quantidade: {{ item.quantidade }} - Subtotal: R$ {{ item.subtotal }}
+            </li>        
+        {% empty %}
+            <li> Não há produtos </li>
         {% endfor %}
         </ul>
-
-    </div>
-    <div class="col-12 text-end align-items-center">
-        <h4> Valor total: {{ total }} </h4>
         <hr>
-    
+        <h4 class="text-end"> Valor total: {{ total }} </h4>
+        <hr> 
+
         <table>
-                <thead class="border bg-dark text-light">
-
-                    <td> Produtos Unicos </td>
-
-                </thead>
-
-                {% for unico in unicos %}
-
-                        <tr class="border"><td> {{ unico }} </td></tr>
-
-                {% endfor %}
-
-                <tr class="border bg-dark text-light"><td>Qt Unicos</td></tr>
-                <tr class="border"><td>{{qt_unicos}}</td></tr>
-
+            <thead class="border bg-dark text-light">
+                <td> Produtos Unicos  </td>
+            </thead>
+            {% for unico in unicos %}
+                <tr class="border"><td > {{ unico }} </td></tr>
+            {% endfor %} 
+            
+            
+            <tr class="border bg-dark text-light"><td>Qt Unicos</td></tr>
+            <tr class="border"><td> {{ qt_unicos }} </td></tr>
 
         </table>
 
